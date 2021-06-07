@@ -8,10 +8,11 @@ const SwallowFactory = ({userObj}) => {
     const [swallow, setSwallow] = useState("");
     const [attachment, setAttachment] = useState("");
     const onSubmit = async (event) => {
+        event.preventDefault();
         if (swallow === "") {
             return;
           }
-        event.preventDefault();
+        
         let attachmentUrl = "";
         if(attachment !== ""){
             const attachmentRef = storageService.ref().child(`${userObj.uid}/${uuidv4()}`);

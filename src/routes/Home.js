@@ -9,6 +9,7 @@ const Home = ({userObj}) => {
     useEffect(() => {
         dbService
             .collection("swallows")
+            .orderBy("createdAt", "desc")
             .onSnapshot(snapshot => {
                 const swallowArray = snapshot
                     .docs
