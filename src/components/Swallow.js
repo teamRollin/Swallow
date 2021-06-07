@@ -1,5 +1,7 @@
 import {dbService, storageService} from "fbase";
 import React, {useState} from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Swallow = ({swallowObj, isOwner}) => {
     const [editing, setEditing] = useState(false);
@@ -29,33 +31,34 @@ const Swallow = ({swallowObj, isOwner}) => {
         setNewSwallow(value);
     };
     return (
-        <div>
+        <div className="nweet">
             {
                 editing
                     ? (<>
                      {isOwner && (<>
                      < form onSubmit = {
                         onSubmit
-                    } > <input type = "text" placeholder = "Edit your s wallow" value = {
+                    }className="container nweetEdit" > <input type = "text" placeholder = "Edit your s wallow" value = {
                         newSwallow
                     }
-                    required onChange = {
+                    required autoFocus onChange = {
                         onChange
-                    } /> <input type ="submit" value="Update Swallow"/> </form>
-                <button onClick={toggleEditing}>Cancel</button> </>)}
+                    } className="formInput" /> <input type ="submit" value="Update Swallow" className="formBtn"/> </form>
+                <span onClick={toggleEditing} className="formBtn cancelBtn">Cancel</span> </>)}
                 </>): <><h4> {
                         swallowObj.text
                     }
                     </h4 > 
-                    {swallowObj.attachmentUrl && (
-                    <img src={swallowObj.attachmentUrl} width="50px" height="50px" alt="upload"/>)}
+                    {swallowObj.attachmentUrl && 
+                    <img src={swallowObj.attachmentUrl} alt="upload"/>}
                     
                     {
-                        isOwner && (<> < button onClick = {
+                        isOwner && (<div className="nweet__actions"> < span onClick = {
                             onDeleteClick
-                        } > Delete Swallow</button> < button onClick = {
-                            toggleEditing
-                        } > Edit Swallow</button> </>
+                        } ><FontAwesomeIcon icon={faTrash} /></span> <span onClick={toggleEditing}>
+                        <FontAwesomeIcon icon={faPencilAlt} />
+                      </span>
+                    </div>
                 )}</>}
         </div>
     );
