@@ -30,7 +30,9 @@ const Home = ({userObj}) => {
                         <Swallow key={swallow.id} swallowObj={swallow} isOwner={swallow.creatorId === userObj.uid}/>
                     ))}
             </div>
+
         </div>
+      </div>
     );
 };
 

@@ -8,7 +8,7 @@ import Profile from "routes/Profile";
 const AppRouter = ({refreshUser, isLoggedIn, userObj}) => {
     return (
         <Router>
-            {isLoggedIn && <Navigation userObj = {userObj} />}
+            {isLoggedIn && <Navigation userObj = {userObj}/>}
             <Switch>
                 {
                     isLoggedIn
@@ -29,16 +29,17 @@ const AppRouter = ({refreshUser, isLoggedIn, userObj}) => {
                             <Profile userObj = {userObj} refreshUser={refreshUser}/>
                         </Route>
                     </div>
+
                         )
                         : (
-                            <> < Route exact path = "/" > <Auth/>
-                        </Route>
-                    </>
-                        )
-                }
-            </Switch>
-        </Router>
-    );
+                            <>
+            <Route exact path="/">
+              <Auth />
+            </Route>
+          </>
+        )}
+      </Switch>
+    </Router>
+  );
 };
-
 export default AppRouter;

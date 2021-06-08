@@ -21,7 +21,7 @@ const SwallowFactory = ({userObj}) => {
         }
        
         const swallowObj ={
-            text: swallow, createdAt: Date.now(), creatorId: userObj.uid,
+            text: swallow, createdAt: Date.now(), creatorId: userObj.uid, creatorName : userObj.displayName,
             attachmentUrl,
         };
         await dbService
@@ -95,6 +95,5 @@ const SwallowFactory = ({userObj}) => {
             </form>
     )
 };
-
 
 export default SwallowFactory;

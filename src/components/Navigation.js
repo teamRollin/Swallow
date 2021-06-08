@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
-const Navigation = ({userObj}) => <nav>
+const Navigation = ({userObj}) => (
+<nav>
     <ul style={{ display: "flex", justifyContent: "center", marginTop: 50 }}>
         <li>
         <Link to="/" style={{ marginRight: 10 }}>
-          <FontAwesomeIcon icon={faTwitter} color={"#04AAFF"} size="2x" />
+          <FontAwesomeIcon icon={faTwitter} color={"#FFFFFF"} size="2x" />
         </Link>
         </li>
         <li>
@@ -21,8 +22,8 @@ const Navigation = ({userObj}) => <nav>
             alignItems: "center",
             fontSize: 12,
           }}
-        >
-          <FontAwesomeIcon icon={faUser} color={"#04AAFF"} size="2x" />
+        > 
+          <FontAwesomeIcon icon={faUser} color={"#FFFFFF"} size="2x" />
           <span style={{ marginTop: 10 }}>
             {userObj.displayName
               ? `${userObj.displayName}의 Profile`
@@ -33,4 +34,5 @@ const Navigation = ({userObj}) => <nav>
     </ul>
 
 </nav>
+);
 export default Navigation;
