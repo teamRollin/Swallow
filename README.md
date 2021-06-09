@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# 🐦 Swallow (Twitter 클론 코딩)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+이 프로젝트는 Nomad Coder의 [트위터 클론코딩](https://https://nomadcoders.co/nwitter)을 기반으로 만든 프로젝트 입니다.
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+- Swallow(게시물) CRUD 구현
+- 이미지 파일 업로드
+- OAuth 또는 email로 회원 정보 생성
+- 회원정보로 로그인과 로그아웃
+- 프로필 업데이트
 
-### `npm start`
+## Environment
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+|    icon    | ![React logo](./img/react.svg) | ![Firebase logo](./img/firebase.svg) | ![Github logo](./img/github.svg) |
+| :--------: | ------------------------------ | ------------------------------------ | -------------------------------- |
+| Technology | React.js (JS)                  | Firebase API                         | Github Pages                     |
 
-### `npm test`
+## Prerequisite
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+Firebase 프로젝트 설정 후 .env 파일을 만들어 firebase configuration을 붙여넣으면 됩니다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```env
+REACT_APP_API_KEY =
+REACT_APP_AUTH_DOMAIN =
+REACT_APP_DATABASE_URL =
+REACT_APP_PROJECT_ID =
+REACT_APP_STORAGE_BUCKET =
+REACT_APP_MESSAGIN_ID =
+REACT_APP_APP_ID = n
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+```shell
+git clone
+cd Swallow
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[http://loacalhost:3030](http://loacalhost:3030) 에서 실행 가능합니다.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+또는 웹 환경에서는 [https://teamrollin.github.io/Swallow](https://teamrollin.github.io/Swallow)에서 확인 가능합니다.
